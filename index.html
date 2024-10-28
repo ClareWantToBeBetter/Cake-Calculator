@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project number 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="overlay overlay-slide-left" id="overlay">
+        <!-- Menu Items -->
+        <nav>
+            <ul>
+                <li id="nav-1" class="slide-out-1"><a href="#RedSection">Red</a></li>
+                <li id="nav-2" class="slide-out-2"><a href="#OrangeSection">Orange</a></li>
+                <li id="nav-3" class="slide-out-3"><a href="#YellowSection">Yellow</a></li>
+                <li id="nav-4" class="slide-out-4"><a href="#GreenSection">Green</a></li>
+                <li id="nav-5" class="slide-out-5"><a href="#BlueSection">Blue</a></li>
+                <li id="nav-6" class="slide-out-6"><a href="#DarkblueSection">Darkblue</a></li>
+                <li id="nav-7" class="slide-out-7"><a href="#VioletSection">Violet</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Menu BUTTON -->
+    <button id="menu-bars">
+        Press here
+    </button>
+
+    <!-- Sections -->
+    <section id="RedSection">
+        <p>We have a great cake recipe for you! It only requires 500 g of flour, 100 g of sugar, 5 eggs and 1 liter of milk!
+            Enter the amount of ingredients you have and we will calculate how many cakes you will get!</p>
+        <div id="cake-inputs-container">
+            <h5>Sugar</h5>
+            <input id="sugar" required>
+            <h5>Flour</h5>
+            <input id="flour" required>
+            <h5>Eggs</h5>
+            <input id="eggs" required>
+            <h5>Milk</h5>
+            <input id="milk" required>
+            <button id="cake-calculation" onclick="howManyCakes(CakeRecipe,availableForCake)">Calculate</button>
+            <p id="cake-result-output">Result is:...</p>
+        </div>
+    </section>
+    <section id="OrangeSection"><h1>Learn More About Me</h1></section>
+    <section id="YellowSection"><h1>These Are My Strengths</h1></section>
+    <section id="GreenSection"><h1>These Are My Results</h1></section>
+    <section id="BlueSection"><h1>Available Anytime</h1></section>
+    <section id="DarkblueSection"><h1>Available Anytime</h1></section>
+    <section id="VioletSection"><h1>Available Anytime</h1></section>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

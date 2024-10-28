@@ -1,0 +1,251 @@
+:root{
+  --primaryColor:black;
+  --navColor1: red;
+  --navColor2: orange;
+  --navColor3: yellow;
+  --navColor4: green;
+  --navColor5: blue;
+  --navColor6: darkblue;
+  --navColor7: darkviolet;
+}
+
+html{
+   box-sizing: border-box;
+ }
+body {
+  margin: 0;
+  /*min-height: 100vh;*/
+  background-color: black;
+  font-family: "Agdasima", sans-serif;
+  /*font-size: 3rem;*/
+}
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+}
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a {
+  position: relative;
+  top: 45%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+nav li a::before {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+}
+
+#menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
+/* --- Sections ------------------------------------ */
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  background-size: cover;
+  background-position: center center;
+  font-size: 3rem;
+}
+section#RedSection {
+  background-image: url("https://plus.unsplash.com/premium_photo-1664302769311-95bbc931bee5?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  font-size: 3rem;
+}
+#RedSection p{
+  margin-right: 100px;
+  max-width: 300px;
+  font-size: 2rem;
+}
+#cake-inputs-container{
+  padding: 0;
+  display: inline;
+}
+#cake-inputs-container h5{
+  margin: 0;
+}
+section#OrangeSection{
+  background-image: url("https://plus.unsplash.com/premium_photo-1673331925351-3ce3e307eb4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+section#YellowSection {
+  background-image: url("https://images.unsplash.com/photo-1484980859177-5ac1249fda6f?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+section#GreenSection {
+  background-image: url("https://images.unsplash.com/photo-1526392587392-d1627b6c134a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+section#BlueSection {
+  background-image: url("https://images.unsplash.com/photo-1502741126161-b048400d085d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+section#DarkblueSection {
+  background-image: url("https://images.unsplash.com/photo-1706125785027-1be64ffce419?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+section#VioletSection {
+  background-image: url("https://plus.unsplash.com/premium_photo-1673728254015-9a437bdb44aa?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#nav-1{
+  background-color: var(--navColor1);
+}
+
+#nav-2{
+  background-color: var(--navColor2);
+}
+
+#nav-3{
+  background-color: var(--navColor3);
+}
+
+#nav-4{
+  background-color: var(--navColor4);
+}
+
+#nav-5{
+  background-color: var(--navColor5);
+}
+#nav-6{
+  background-color: var(--navColor6);
+}
+#nav-7{
+  background-color: var(--navColor7);
+}
+/*animations            */
+
+.slide-in-1 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+
+.slide-in-6 {
+  animation: slide-in 0.4s linear 1.2s both;
+}
+
+.slide-in-7 {
+  animation: slide-in 0.4s linear 1.4s both;
+}
+
+nav li#nav-3 a{
+  color: black;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide out animation with delay for each */
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+.slide-out-6 {
+  animation: slide-out 0.3s linear 0.07s both;
+}
+.slide-out-7 {
+  animation: slide-out 0.3s linear 0.05s both;
+}
+
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
